@@ -1,43 +1,44 @@
 {
-  "schemaVersion": 1,
-  "id": "freelook",
-  "version": "${version}",
-  "name": "Freelook",
-  "description": "A mod which allows player to turn their head without changing the direction in which you are moving",
-  "authors": [
-    "Celibistrial"
-  ],
-  "contributors": [
-    "BoBkiNN",
-    "Fourmisain",
-    "fantahund",
-    "TimDev9492",
-    "Siratox",
-    "Seeloewen",
-    "dirtTW",
-    "notlin4"
-  ],
-  "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/freelook-fabric",
-    "sources": "https://github.com/Celibistrial/freelook"
-  },
-  "license": "GNU GPLv3",
-  "icon": "assets/freelook/icon.png",
-  "environment": "client",
-  "entrypoints": {
-    "client": [
-      "freelook.freelook.FreeLookMod"
-    ],
-    "modmenu": [
-      "freelook.freelook.config.ModMenuIntegration"
-    ]
-  },
-  "mixins": [
-    "freelook.mixins.json"
-  ],
-  "depends": {
-    "fabricloader": ">=0.15.11",
-    "minecraft": "1.21.x",
-    "fabric-api": "*"
-  }
+	"schemaVersion": 1,
+	"id": "winterwonderlandorigins",
+	"version": "${version}",
+	"name": "WinterWonderlandOrigins",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/winterwonderlandorigins/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.wwo.WinterWonderlandOrigins"
+		],
+		"client": [
+			"com.wwo.WinterWonderlandOriginsClient"
+		],
+		"fabric-datagen": [
+			"com.wwo.WinterWonderlandOriginsDataGenerator"
+		]
+	},
+	"mixins": [
+		"winterwonderlandorigins.mixins.json",
+		{
+			"config": "winterwonderlandorigins.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.1",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
 }
